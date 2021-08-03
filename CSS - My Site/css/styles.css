@@ -6,34 +6,45 @@ body {
 }
 
 h1{
-  margin-top: 0;
+  font-size: 5.625rem;
+  color: #66BFBF;
+  margin: 50px auto 0px auto;
   font-family: 'Sacramento', cursive;
 }
 
 h2 {
+  font-size: 2.5rem;
+  color: #66BFBF;
+  margin: 2.5rem auto 2.5rem auto;
   font-family: 'Montserrat', sans-serif;
 }
 
 h3 {
+  color: #11999E;
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  color: #11999E;
+}
+
+.img_avatar {
+  border-radius: 50%;
+}
+
 .top-container {
-  background-color: #E4F9F5;
+  background-color: #EAF6F6;
   position: relative;
   padding-top: 100px;
 }
 
 .middle-container {
-  background-color: red;
-  width: 200px;
-  height: 200px;
+
 }
 
 .bottom-container {
-  background-color: blue;
-  width: 200px;
-  height: 200px;
+  background-color: #66BFBF;
+  padding: 2rem 0 0 0;
 }
 
 .top-cloud {
@@ -50,4 +61,77 @@ h3 {
 
 .pro {
   text-decoration: underline;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 5rem auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.code-img {
+  width: 10rem;
+  float: left;
+  margin-right: 30px;
+}
+
+.skill-img {
+  width: 10rem;
+  float: right;
+  margin-left: 30px;
+}
+
+.profile-txt {
+  color: #40514E;
+  margin: 2.5rem auto 2.5rem auto;
+}
+
+.hr-dotted {
+  border: none;
+  border-top: 0.4375rem dotted #C0FFD9;
+  width: 5rem;
+  height: 0px;
+  margin-top: 5rem;
+}
+
+.BUTTON_VUB {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   color: #EAF6F6;
+   font-family: Helvetica;
+   font-size: 20px;
+   font-weight: 100;
+   padding: 10px;
+   background-color: #66BFBF;
+   text-shadow: 1px 1px 20px #000000;
+   border: none;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+   margin: 3rem auto;
+}
+
+.BUTTON_VUB:hover {
+   background: #1E62D0;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   text-decoration: none;
+}
+
+.icon-author {
+  font-size: 0.6rem;
+  color: black;
+  text-align: right;
+}
+
+.footer-link {
+  margin: 0 2rem;
+}
+
+.copyright {
+  color: #EAF6F6;
 }
