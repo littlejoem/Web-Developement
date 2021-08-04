@@ -1,6 +1,7 @@
 
 body {
   margin: 0px;
+  color: #40514E;
   text-align: center;
   font-family: 'Merriweather', serif;
 }
@@ -26,6 +27,11 @@ h3 {
 
 a {
   color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    line-height: 2;
 }
 
 .img_avatar {
@@ -35,7 +41,8 @@ a {
 .top-container {
   background-color: #EAF6F6;
   position: relative;
-  padding-top: 100px;
+  padding-top: 6.25rem;
+  margin-bottom: 3rem;
 }
 
 .middle-container {
@@ -47,15 +54,20 @@ a {
   padding: 2rem 0 0 0;
 }
 
+.contact-me {
+  width: 30%;
+  margin: 2.5rem auto 3.75rem;
+}
+
 .top-cloud {
   position: absolute;
   right: 300px;
-  top: 50px;
+  top: 40px;
 }
 
 .bottom-cloud {
   position: absolute;
-  left: 300px;
+  left: 250px;
   bottom: 300px;
 }
 
@@ -67,7 +79,6 @@ a {
   width: 50%;
   margin: 5rem auto;
   text-align: left;
-  line-height: 2;
 }
 
 .code-img {
@@ -83,7 +94,7 @@ a {
 }
 
 .profile-txt {
-  color: #40514E;
+  width: 30%;
   margin: 2.5rem auto 2.5rem auto;
 }
 
@@ -130,6 +141,11 @@ a {
 
 .footer-link {
   margin: 0 2rem;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #EAF6F6;
 }
 
 .copyright {
