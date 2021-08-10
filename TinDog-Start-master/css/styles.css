@@ -23,13 +23,14 @@ h3 {
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 
 /* Navigation Bar */
 #title {
   background-color: #FF4C68;
   color: #fff;
+  position: relative;
 }
 
 .navbar {
@@ -57,19 +58,23 @@ h3 {
 }
 
 /* Title image */
-.title-img-box {
+/* .title-img-box {
   text-align: center;
   margin: auto;
-}
+} */
 
 .title-image {
   width: 50%;
   transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
 }
 
 /* Features */
 #features {
   text-align: center;
+  background-color: #FFF;
+  position: relative;
 }
 
 .icon {
@@ -135,4 +140,19 @@ h3 {
 .button-pricing {
   width: 100%;
   margin-top: auto;
+}
+
+@media (max-width: 991px) {
+  #title {
+    text-align: center;
+  }
+  .title-image {
+    width: 50%;
+    transform: rotate(0deg);
+    position: static;
+    right:auto;
+  }
+  /* .title-img-box {
+    margin: auto;
+  } */
 }
