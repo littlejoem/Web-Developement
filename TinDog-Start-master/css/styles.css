@@ -142,6 +142,36 @@ h3 {
   margin-top: auto;
 }
 
+/* Cta */
+#cta {
+  background-color: #FF4C68;
+  color: #FFF;
+  text-align: center;
+  padding: 50px 15%;
+}
+
+.cta-h3 {
+  font-size: 3rem;
+}
+
+/* Footer */
+#footer {
+  background-color: #FFF;
+  color: #000;
+  text-align: center;
+  padding: 30px 15%;
+}
+
+.footer-fab {
+  padding: 30px 1.5rem;
+
+}
+
+.footer-p {
+  font-size: 1.5rem;
+  color: #8F8F8F;
+}
+
 @media (max-width: 991px) {
   #title {
     text-align: center;
@@ -152,7 +182,4 @@ h3 {
     position: static;
     right:auto;
   }
-  /* .title-img-box {
-    margin: auto;
-  } */
 }
