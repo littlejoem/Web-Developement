@@ -1,0 +1,21 @@
+var output = [];
+var count = 0;
+var value;
+
+function fizzBuzz() {
+  while (count < 100) {
+      count++;
+      value = count;
+      var fizzOrBuzz = "";
+      if (count % 3 === 0) {
+        fizzOrBuzz = "Fizz";
+        value = fizzOrBuzz;
+      }
+      if (count % 5 === 0) {
+        fizzOrBuzz = fizzOrBuzz + "Buzz";
+        value = fizzOrBuzz;
+      }
+      output.push(value);
+  }
+      console.log(output);
+}

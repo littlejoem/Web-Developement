@@ -1,0 +1,12 @@
+function fabinacciCode(num) {
+  let fabinacciCode = [];
+
+  for (let i = 0; i < num; i++) {
+    if (i < 2) {
+      fabinacciCode.push(i);
+    } else {
+      fabinacciCode.push(fabinacciCode[i - 2] + fabinacciCode[i - 1]);
+    }
+  }
+  return fabinacciCode;
+}
