@@ -1,0 +1,12 @@
+var houseKeeper2 = new HousKeeper(12, "Jane", ["bathrooms", "lobby", "bedrooms"]);
+
+
+function HousKeeper(yearsOfExperience, name, cleaningRepertoire) {
+  this.yearsOfExperience = yearsOfExperience;
+  this.name = name;
+  this.cleaningRepertoire = cleaningRepertoire;
+  this.clean = function() {
+    alert("Cleaning in progress");
+  
+  }
+}

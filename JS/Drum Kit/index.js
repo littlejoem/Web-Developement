@@ -1,11 +1,17 @@
 var buttons = document.querySelectorAll(".drum")
 for (var key of buttons) {
-  key.addEventListener("click", handleClick);
+  key.addEventListener("click", function() {
+    var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+  });
 }
 
-function handleClick() {
-  var buttonInnerHTML = this.innerHTML;
-  switch (buttonInnerHTML) {
+document.addEventListener("keydown", function(event) {
+  makeSound(event.key);
+})
+
+function makeSound(key) {
+  switch (key) {
     case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
@@ -37,7 +43,4 @@ function handleClick() {
     default:
 
   }
-
-  // this.style.color = "white";
-  console.log(buttonInnerHTML);
 }
