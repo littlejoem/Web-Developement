@@ -4,6 +4,6 @@ $("h1").click(function() {
   $("h1").css("color", "yellow")
 });
 
-$("input").keydown(function(event) {
-  console.log(event.key);
+$("button").on("click", function() {
+  $("h1").fadeOut("fast");
 });
