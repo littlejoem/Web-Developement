@@ -5,18 +5,22 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 
 function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
-  return randomNumber;
+  var randomChosenColour = buttonColours[randomNumber];
+  playSound("sounds/" + randomChosenColour + ".mp3");
+
+  gamePattern.push(randomChosenColour);
+
+  $("#" + randomChosenColour).fadeOut(100).fadeIn(50);
+  // return randomNumber;
 }
 
-var randomChosenColour = buttonColours[nextSequence()];
-
-gamePattern.push(randomChosenColour);
-
-$("#" + randomChosenColour).fadeOut(100).fadeIn(50);
+function playSound(name) {
+  var audio = new Audio(name);
+  audio.play();
+}
 
 $("div .btn").click(function() {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
-  var audio = new Audio("sounds/" + userChosenColour + ".mp3");
-  audio.play();
+  playSound("sounds/" + userChosenColour + ".mp3");
 })
