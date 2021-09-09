@@ -19,8 +19,18 @@ function playSound(name) {
   audio.play();
 }
 
+function animatePress(currentColour) {
+  $("#" + currentColour).addClass("pressed");
+  console.log($("#" + currentColour).className);
+  setTimeout(function() {
+    $("#" + currentColour).removeClass("pressed");
+  }, 100);
+
+}
+
 $("div .btn").click(function() {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
+  animatePress(userChosenColour);
   playSound("sounds/" + userChosenColour + ".mp3");
 })
