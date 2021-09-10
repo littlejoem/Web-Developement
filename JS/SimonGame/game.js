@@ -57,12 +57,16 @@ function checkAnswer() {
   }
 }
 
-function endGame() {
+function gameOver() {
+  $("body").addClass("game-over");
+  setTimeout(function() {
+    $("body").removeClass("game-over");
+  }, 200);
+  playSound("sounds/wrong.mp3");
   level = 0;
   gamePattern = [];
   userClickedPattern = [];
   levelText(level);
-  console.log("gameEnd");
 }
 
 $(document).keydown(function(event){
@@ -84,7 +88,7 @@ $("div .btn").click(function() {
         nextSequence();
       }, 1000);
     } else if (result === "wrong") {
-      endGame();
+      gameOver();
     }
   }
 })
