@@ -5,7 +5,7 @@ const https = require("https");
 
 app.get('/', (req, res) => {
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=metric&lang=de&appid=1cfd9ddca757c0f858f9287c9e198dda';
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=en&appid=1cfd9ddca757c0f858f9287c9e198dda';
   https.get(url, (response) => {
     console.log('statusCode:' , response.statusCode);
     console.log('header:', response.header);
@@ -14,19 +14,16 @@ const url = 'https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=
       // process.stdout.write(d);
       const weatherData = JSON.parse(d);
       const temp = weatherData.main.temp;
-      const weatherDescription = weatherData.weather[0].description
-      console.log(temp);
-      console.log(weatherDescription);
+      const weatherDescription = weatherData.weather[0].description;
+      const weatherConditionIcon = weatherData.weather[0].icon;
+      const imageURL = 'http://openweathermap.org/img/wn/' + weatherConditionIcon + '@2x.png';
+      res.write('<p>The weather is currently ' + weatherDescription + '</p>');
+      res.write('<h1>The temperature in New York is ' + temp + ' degrees Celcius.</h1>');
+      res.write('<img src=' + imageURL + '>');
+      res.send();
     });
-  // }).on('error', (e) => {
-  //   console.log(e);
-  })
-
-
-  res.send("Server is up and running.");
+  });
 });
-
-
 
 app.listen(3000, function() {
   console.log("Server is running on port 3000.");
