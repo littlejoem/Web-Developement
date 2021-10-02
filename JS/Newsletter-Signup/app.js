@@ -39,14 +39,30 @@ app.post('/', (req, res) => {
   };
 
   const request = https.request(url, options, (response) => {
+
     response.on("data", (data) => {
-      console.log(JSON.parse(data));
+      const jsonParseData = JSON.parse(data);
+      console.log(jsonParseData);
+      const error_count = jsonParseData.error_count;
+      console.log(error_count);
+
+      if (response.statusCode === 200 && error_count === 0) {
+        res.sendFile(__dirname + '/success.html');
+      } else {
+        res.sendFile(__dirname + '/failure.html');
+      };
+
     });
+
   });
 
   request.write(jsonData);
   request.end();
 
+});
+
+app.post('/failure', (req, res) => {
+  res.redirect('/');
 });
 
 app.listen(3000, () => {
