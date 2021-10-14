@@ -35,7 +35,7 @@ app.post('/', (req, res) => {
   const url = "https://us5.api.mailchimp.com/3.0/lists/8d232db6f8";
   const options = {
     method: "POST",
-    auth: "littlejoem:ed1ccfac558621ee87f1a7438be6969d-us5"
+    auth: "littlejoem:eaee69fd715e9024f6abe6df70b92fcd-us5"
   };
 
   const request = https.request(url, options, (response) => {
@@ -71,6 +71,7 @@ app.listen(3000, () => {
 
 // API key
 // ed1ccfac558621ee87f1a7438be6969d-us5
+// eaee69fd715e9024f6abe6df70b92fcd-us5
 
 //Audience ID
 // 8d232db6f8
