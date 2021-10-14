@@ -1,17 +1,19 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+let express = require('express');
+let bodyParser = require('body-parser');
+let app = express();
 
-const app = express();
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   var today = new Date();
   var currentDay = today.getDay();
+  var day = "";
+  var daysOfWeek = ['Sunday', 'Monday', 'Tusday', 'Wednsday', 'Thursday', 'Friday', 'Saturday'];
 
-  if (currentDay === 6 || currentDay === 0) {
-    res.send('<h1>Yay! Today is weekend!</h1>');
-  } else {
-    res.sendFile(__dirname + '/index.html');
-  };
+  day = daysOfWeek[currentDay];
+  res.render('list', {
+    kindOfDay: day
+  });
 
 });
 
