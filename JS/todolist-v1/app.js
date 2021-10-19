@@ -2,21 +2,22 @@ let express = require('express');
 let bodyParser = require('body-parser');
 let app = express();
 
-var items = [];
+let items = [];
 
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  var today = new Date();
-  var option = {
+  let today = new Date();
+  let option = {
     weekday:  "long",
     day: "numeric",
     month: "long",
   };
 
-  var day = today.toLocaleDateString('en-US', option);
+  let day = today.toLocaleDateString('en-US', option);
 
   res.render('list', {
     kindOfDay: day,
@@ -25,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  var item = req.body.newItem;
+  let item = req.body.newItem;
 
   items.push(item);
 
