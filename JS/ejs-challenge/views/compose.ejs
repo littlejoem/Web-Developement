@@ -1,9 +1,20 @@
 <%- include('partials/header') -%>
 
 <h1>Compose</h1>
-<form class="" action="/compose" method="post">
-  <input type="text" name="postTitle" placeholder="Write your thoughts" autocomplete="off">
-  <button type="submit" name="compose" value="newPublish">Publish</button>
+<form action="/compose" method="post">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input class="form-control" type="text" name="postTitle" class="form-control" autocomplete="off">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Post</label>
+    <textarea class="form-control" type="text" name="postBody" id="exampleFormControlTextarea1" rows="3" autocomplete="off"></textarea>
+  </div>
+  <div class="postSubmit">
+    <button type="submit" class="btn btn-primary" name="compose" value="newPublish">Publish</button>
+  </div>
+
+
 </form>
 
 <%- include('partials/footer') -%>
